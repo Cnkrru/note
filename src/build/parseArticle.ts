@@ -18,12 +18,20 @@ import { componentPlugin } from '@mdit-vue/plugin-component'
 import { slugify } from '@mdit-vue/shared'
 import { container } from '@mdit/plugin-container'
 
+// 上下篇链接：编译期按 sidebar.json 展平顺序推导，首篇无 prev、末篇无 next
+type PostNavLink = {
+  title: string
+  link: string
+}
+
 // 文章元数据：无 frontmatter，全部由编译期推导
 // title 取文件名末段，updated 取源文件 mtime，text 为正文纯文本（供全文搜索索引）
 type ArticleMeta = {
   title: string
   updated: string
   text?: string
+  prev?: PostNavLink | null
+  next?: PostNavLink | null
 }
 
 const highlightTheme = createCssVariablesTheme()
@@ -518,13 +526,15 @@ const mdParser = (files: string[]) => {
     walkSidebar(sidebarTree)
     // 为每篇文章算 prev/next，写进 articles 元数据
     for (let i = 0; i < flat.length; i++) {
-      const id = flat[i].id
-      if (articles[id]) {
-        const prev = i > 0 ? flat[i - 1] : null
-        const next = i < flat.length - 1 ? flat[i + 1] : null
-        articles[id].prev = prev ? { title: prev.title, link: prev.link } : null
-        articles[id].next = next ? { title: next.title, link: next.link } : null
-      }
+      // noUncheckedIndexedAccess 下 flat[i] 判为可能 undefined，先取出再做空值收敛
+      const cur = flat[i]
+      if (!cur) continue
+      const target = articles[cur.id]
+      if (!target) continue // 侧栏里配了但 docs 下无对应文章的项，静默跳过
+      const prev = i > 0 ? (flat[i - 1] ?? null) : null
+      const next = i < flat.length - 1 ? (flat[i + 1] ?? null) : null
+      target.prev = prev ? { title: prev.title, link: prev.link } : null
+      target.next = next ? { title: next.title, link: next.link } : null
     }
   }
 

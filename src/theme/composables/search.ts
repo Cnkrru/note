@@ -3,11 +3,14 @@ import MiniSearch from 'minisearch'
 import { getRouter } from '@/router'
 
 /* ====================<search>==================== */
+// 索引文档：text 为编译期提取的正文纯文本，参与匹配
 type SearchDoc = { id: string; title: string; date: string; text: string }
+// 检索结果：minisearch 只回传 storeFields 里登记的字段（正文仅用于匹配、不回传），故结果无 text
+type SearchHit = Omit<SearchDoc, 'text'>
 type PostMeta = { title?: string; updated?: string; text?: string }
 
 export const RefKeyword = ref('')
-export const RefSearchRes = ref<SearchDoc[]>([])
+export const RefSearchRes = ref<SearchHit[]>([])
 export const searchOpen = ref(false)
 
 let miniSearch: MiniSearch<SearchDoc> | null = null
