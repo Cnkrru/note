@@ -38,11 +38,6 @@ __screenshots__/
 # Vite
 *.timestamp-*-*.mjs
 
-# vite-ssg 预渲染临时目录（构建结束自动清理，留此规则防中断残留）
-.vite-ssg-temp/
-
-# md 编译中间产物（.build 脚本生成的 SFC / 元数据缓存）
-.cache/
-# 编译产物：post.json 由编译期脚本生成，不进仓库
-public/config/
+# hello 引擎的中间产物（.cache 产物 SFC、public/config/*.json、配置快照）
+.hd/
 .workbuddy/
