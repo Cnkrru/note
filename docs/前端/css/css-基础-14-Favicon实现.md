@@ -1,4 +1,3 @@
----
 ## 1. favicon实现
 ### 1.1 实现步骤
 1. 准备favicon文件：推荐使用.ico、.png或.svg格式

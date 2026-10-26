@@ -41,3 +41,6 @@ __screenshots__/
 # hello 引擎的中间产物（.cache 产物 SFC、public/config/*.json、配置快照）
 .hd/
 .workbuddy/
+# VitePress 构建产物与缓存
+docs/.vitepress/dist
+docs/.vitepress/cache

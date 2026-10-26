@@ -4,12 +4,12 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "hd dev",
-    "build": "hd build",
-    "preview": "hd preview"
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "preview": "vitepress preview docs"
   },
   "devDependencies": {
-    "hellodocs": "^0.1.0"
+    "vitepress": "^1.6.3"
   },
   "engines": {
     "node": "^22.18.0 || >=24.12.0"
