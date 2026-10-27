@@ -4,14 +4,17 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "hd dev",
-    "build": "hd build",
-    "preview": "hd preview"
-  },
-  "devDependencies": {
-    "hellodocs": "^0.1.0"
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "preview": "vitepress preview docs"
   },
   "engines": {
     "node": "^22.18.0 || >=24.12.0"
+  },
+  "devDependencies": {
+    "mermaid": "^11.17.2",
+    "vitepress": "^1.6.4",
+    "vitepress-plugin-mermaid": "^2.0.17",
+    "vitepress-sidebar": "^1.41.0"
   }
 }

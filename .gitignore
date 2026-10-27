@@ -38,6 +38,7 @@ __screenshots__/
 # Vite
 *.timestamp-*-*.mjs
 
-# hello 引擎的中间产物（.cache 产物 SFC、public/config/*.json、配置快照）
-.hd/
+# VitePress 构建缓存
+docs/.vitepress/cache/
+
 .workbuddy/
