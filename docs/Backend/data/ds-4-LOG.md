@@ -67,15 +67,7 @@
     <message>Application started successfully</message>
   </log>
   ```
----
-### 日志分析工具
-- **ELK Stack**：Elasticsearch + Logstash + Kibana
-- **Graylog**：专业的日志管理平台
-- **Splunk**：企业级日志分析解决方案
-- **Datadog**：云原生监控和日志分析
-- **简单工具**：grep、awk、sed等命令行工具
-
----
+  
 ### log示例如下
 - **时间戳+类型+信息**
 ```

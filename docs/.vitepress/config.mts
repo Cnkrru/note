@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress'
 import { withSidebar } from 'vitepress-sidebar'
 import { withMermaid } from 'vitepress-plugin-mermaid'
+import { katex } from '@mdit/plugin-katex'
 
 const siteTitle = 'KruDoc'
 const siteDescription =
@@ -17,6 +18,11 @@ export default withMermaid(
       outDir: '../dist',
       ignoreDeadLinks: 'localhostLinks',
       lastUpdated: true,
+      markdown: {
+        config: (md) => {
+          md.use(katex)
+        },
+      },
       vite: {
         optimizeDeps: {
           // mermaid 依赖的这几个包是 CJS，dev 下需预打包才能拿到 default 导出
