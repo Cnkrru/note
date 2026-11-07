@@ -2,40 +2,36 @@
 
 ## 1. 模块介绍
 
-- **logging**日志记录。
+- logging日志记录。
 - OK
 
 ---
 
 ## 2. 常用函数
 
-| 分类 | 函数名 | 必选参数 | 作用 |
-| --- | --- | --- | --- |
-| 配置API | `logging.basicConfig(**kwargs)` | 无 | 配置基础日志系统 |
-| | `logging.getLogger(name=None)` | 无 | 获取日志器实例 |
-| | `logger.setLevel(level)` | level | 设置日志级别 |
-| | `logger.addHandler(handler)` | handler | 添加处理器 |
-| | `logging.Formatter(fmt=None, datefmt=None)` | 无 | 创建日志格式化器 |
-| | `logging.FileHandler(filename)` | filename | 创建文件输出器 |
-| | `logging.StreamHandler(stream=None)` | 无 | 创建终端输出器 |
-| 日志记录 | `logging.debug(msg, *args, **kwargs)` | msg | 记录调试级别的消息 |
-| | `logging.info(msg, *args, **kwargs)` | msg | 记录信息级别的消息 |
-| | `logging.warning(msg, *args, **kwargs)` | msg | 记录警告级别的消息 |
-| | `logging.error(msg, *args, **kwargs)` | msg | 记录错误级别的消息 |
-| | `logging.critical(msg, *args, **kwargs)` | msg | 记录严重错误级别的消息 |
-| | `logging.exception(msg, *args, **kwargs)` | msg | 记录异常信息 |
+- 配置API：`logging.basicConfig(**kwargs)`，无，配置基础日志系统
+- `logging.getLogger(name=None)`，无，获取日志器实例
+- `logger.setLevel(level)`，level，设置日志级别
+- `logger.addHandler(handler)`，handler，添加处理器
+- `logging.Formatter(fmt=None, datefmt=None)`，无，创建日志格式化器
+- `logging.FileHandler(filename)`，filename，创建文件输出器
+- `logging.StreamHandler(stream=None)`，无，创建终端输出器
+- 日志记录：`logging.debug(msg, *args, **kwargs)`，msg，记录调试级别的消息
+- `logging.info(msg, *args, **kwargs)`，msg，记录信息级别的消息
+- `logging.warning(msg, *args, **kwargs)`，msg，记录警告级别的消息
+- `logging.error(msg, *args, **kwargs)`，msg，记录错误级别的消息
+- `logging.critical(msg, *args, **kwargs)`，msg，记录严重错误级别的消息
+- `logging.exception(msg, *args, **kwargs)`，msg，记录异常信息
 
 ---
 
 ## 3. 日志级别
 
-| 级别 | 数值 | 描述 |
-| --- | --- | --- |
-| DEBUG | 10 | 详细的调试信息 |
-| INFO | 20 | 一般信息 |
-| WARNING | 30 | 警告信息 |
-| ERROR | 40 | 错误信息 |
-| CRITICAL | 50 | 严重错误信息 |
+- DEBUG：10，详细的调试信息
+- INFO：20，一般信息
+- WARNING：30，警告信息
+- ERROR：40，错误信息
+- CRITICAL：50，严重错误信息
 
 ---
 
@@ -43,24 +39,20 @@
 
 ### 4.1 basicConfig参数
 
-| 参数 | 描述 |
-| --- | --- |
-| level | 设置日志级别 |
-| format | 设置日志格式 |
-| datefmt | 设置日期时间格式 |
-| filename | 设置日志文件路径 |
-| filemode | 设置文件打开模式（'w'或'a'） |
-| stream | 设置输出流 |
+- level：设置日志级别
+- format：设置日志格式
+- datefmt：设置日期时间格式
+- filename：设置日志文件路径
+- filemode：设置文件打开模式（'w'或'a'）
+- stream：设置输出流
 
 ### 4.2 日志格式占位符
 
-| 占位符 | 描述 |
-| --- | --- |
-| %(asctime)s | 日志记录的时间 |
-| %(levelname)s | 日志级别 |
-| %(message)s | 日志消息 |
-| %(name)s | 日志器名称 |
-| %(filename)s | 文件名 |
+- %(asctime)s：日志记录的时间
+- %(levelname)s：日志级别
+- %(message)s：日志消息
+- %(name)s：日志器名称
+- %(filename)s：文件名
 
 ---
 

@@ -4,7 +4,7 @@
 
 ## 时间戳
 
-时间戳指从 `1970-01-01 00:00:00` 开始计时的一段**毫秒数**。
+时间戳指从 `1970-01-01 00:00:00` 开始计时的一段毫秒数。
 
 各种后端语言一般都有时间库，比如 Python 的 `time`、`datetime`，C 的 `time`，都是基于时间戳。
 
@@ -14,11 +14,9 @@
 
 ### 创建对象 `new Date(<参数>)`
 
-| 参数 | 说明 |
-|------|------|
-| 时间戳数字 | 指定时间戳创建 |
-| 年月日 时分秒 | 按具体日期时间创建 |
-| 不填 | 默认获取当前时间戳 |
+- 时间戳数字：指定时间戳创建
+- 年月日 时分秒：按具体日期时间创建
+- 不填：默认获取当前时间戳
 
 ### 当前时间戳 `Date.now()`
 
@@ -26,20 +24,18 @@
 
 ### 读取方法 `Date.prototype.<操作><时区><类型>`
 
-- **操作**：`get` / `set` / `to`
+- 操作：`get` / `set` / `to`
   - `get`：由时间戳转换为具体类型的时间
   - `set`、`to`：一般用不到
-- **时区**：默认 / UTC 标准世界时间
-- **类型**：年、月、日、时、分、秒
+- 时区：默认 / UTC 标准世界时间
+- 类型：年、月、日、时、分、秒
 
-| 类型 | 方法 |
-|------|------|
-| 年 | `Date.prototype.getFullYear()` |
-| 月 | `Date.prototype.getMonth()` |
-| 日 | `Date.prototype.getDate()` |
-| 时 | `Date.prototype.getHours()` |
-| 分 | `Date.prototype.getMinutes()` |
-| 秒 | `Date.prototype.getSeconds()` |
+- 年：`Date.prototype.getFullYear()`
+- 月：`Date.prototype.getMonth()`
+- 日：`Date.prototype.getDate()`
+- 时：`Date.prototype.getHours()`
+- 分：`Date.prototype.getMinutes()`
+- 秒：`Date.prototype.getSeconds()`
 
 > Date 库文档：[MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date)
 

@@ -49,7 +49,7 @@
 - Math.expm1(x)
     - e^x - 1，x 接近 0 时比 exp(x)-1 更精确
 - Math.log(x)
-    - 自然对数 ln(x)，只有这一个底数参数，**不支持指定 base**
+    - 自然对数 ln(x)，只有这一个底数参数，不支持指定 base
 - Math.log2(x)
     - 以 2 为底的对数
 - Math.log10(x)

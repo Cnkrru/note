@@ -1,0 +1,17 @@
+## 简介
+- MDN文档:[https://developer.mozilla.org/zh-CN/docs/Web/API/Location](https://developer.mozilla.org/zh-CN/docs/Web/API/Location)
+- 该子对象与地址栏URL相关
+## 属性
+- hash
+- host
+- hostname
+- href
+- origin
+- pathname
+- port
+- prorocol
+## 方法
+- assign
+- reload
+- replace
+- toString

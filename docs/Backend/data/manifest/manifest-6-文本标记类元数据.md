@@ -1,17 +1,15 @@
 # 文本 / 标记类元数据写法
 
-> 这类文件的元数据**不是格式强制**的，多为社区/框架约定，可以自由添加或去除。
+> 这类文件的元数据不是格式强制的，多为社区/框架约定，可以自由添加或去除。
 
 ## 一、Markdown（frontmatter，可选）
 
 ### 常见字段
-| 字段 | 说明 |
-|------|------|
-| title | 标题 |
-| date | 日期 |
-| tags | 标签（数组） |
-| description | 描述 |
-| author | 作者 |
+- title：标题
+- date：日期
+- tags：标签（数组）
+- description：描述
+- author：作者
 
 ### 写法（YAML frontmatter）
 ```markdown
@@ -32,14 +30,12 @@ description: 这是一篇笔记
 ## 二、HTML（`<meta>` 标签）
 
 ### 常见字段
-| 字段 | 说明 |
-|------|------|
-| title | 页面标题 |
-| description | 页面描述 |
-| keywords | 关键词 |
-| author | 作者 |
-| charset | 字符集 |
-| viewport | 视口 |
+- title：页面标题
+- description：页面描述
+- keywords：关键词
+- author：作者
+- charset：字符集
+- viewport：视口
 
 ```html
 <head>
@@ -85,11 +81,9 @@ description: 这是一篇笔记
 
 ## 五、CSV / TXT / LOG（无元数据）
 
-| 格式 | 元数据 |
-|------|--------|
-| CSV | 无（可选首行注释） |
-| TXT | 无 |
-| LOG | 无（行内自带时间戳） |
+- CSV：无（可选首行注释）
+- TXT：无
+- LOG：无（行内自带时间戳）
 
 ```csv
 # 首行注释（约定，非常规）

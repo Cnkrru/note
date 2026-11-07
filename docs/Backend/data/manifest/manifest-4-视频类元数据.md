@@ -1,18 +1,16 @@
 # 视频类元数据写法
 
-> 视频元数据存在**容器层**（moov atom / Matroska Tags），与编码流（H.264 等）分离。
+> 视频元数据存在容器层（moov atom / Matroska Tags），与编码流（H.264 等）分离。
 
 ## 一、MP4 / MOV（moov atom）
 
 ### 常见字段
-| 字段 | 说明 |
-|------|------|
-| ©nam | 标题 |
-| ©too | 编码器 / 制作软件 |
-| ©day | 创建时间 |
-| ©ART | 作者 |
-| 分辨率 | 宽 x 高 |
-| 时长 | 秒数 |
+- ©nam：标题
+- ©too：编码器 / 制作软件
+- ©day：创建时间
+- ©ART：作者
+- 分辨率：宽 x 高
+- 时长：秒数
 
 ### 如何查看（ffprobe）
 ```bash
@@ -26,14 +24,12 @@ ffmpeg -i in.mp4 -metadata title="我的视频" -metadata artist="作者" out.mp
 
 ## 二、MKV / WebM（Matroska Tags）
 
-| 字段 | 说明 |
-|------|------|
-| TITLE | 标题 |
-| ARTIST | 演员 / 作者 |
-| DIRECTOR | 导演 |
-| DATE_RELEASED | 发行日期 |
-| LANGUAGE | 语言 |
-| 章节 | 章节信息 |
+- TITLE：标题
+- ARTIST：演员 / 作者
+- DIRECTOR：导演
+- DATE_RELEASED：发行日期
+- LANGUAGE：语言
+- 章节：章节信息
 
 ```bash
 mkvpropedit in.mkv --edit info --set title=我的视频 \
@@ -42,12 +38,10 @@ mkvpropedit in.mkv --edit info --set title=我的视频 \
 
 ## 三、AVI（RIFF INFO）
 
-| 字段 | 说明 |
-|------|------|
-| INAM | 标题 |
-| IART | 作者 |
-| ICOP | 版权 |
-| ISFT | 制作软件 |
+- INAM：标题
+- IART：作者
+- ICOP：版权
+- ISFT：制作软件
 
 ```bash
 ffmpeg -i in.avi -metadata title=视频标题 out.avi

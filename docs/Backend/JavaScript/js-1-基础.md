@@ -1,147 +1,150 @@
-> 学习资料来源:MDN文档:(MDN-JS)[https://developer.mozilla.org/zh-CN/docs/Web/JavaScript]  
+> 学习资料来源:MDN文档:(MDN-JS)[https://developer.mozilla.org/zh-CN/docs/Web/JavaScript]
 ## 数据
-1. 定义数据
-- var,let.const
-    - 定义变量的关键词
-    - var有变量提升的问题，变量位置在解释前全部提前到文件开头解析
-2. 数据类型
-    1. 布尔
-        1. bool
-            - true/false
-    2. 数字
-        1. Number
-            - int+float
-        2. BigInt
-            - 任意精度数字
-    3. 字符
-        1. String
-            - 静态字符数组(动态数组详见于数据容器部分)
-    4. 空值
-        1. null
-            - 类似C的空指针，这个变量在栈上只有key，value没有任何数据
-            - 关于栈内存，详件于(计算机原理)
-        3. undefined
-            - 类似null，区别在于null是人为留空，undefined是解释器自己留空
-    5. 其他
-        1. object(不能算是基础数据类型)
-            - JavaScript，{}就能创建一个对象，写起来跟面向对象差不多，不需要写class和this
-        2. symbol
-            - 不懂，没用过
-3. 类型转换
-    1. 显式转换
-        1. 转数字:
-            - 严格:`Number()`
-            - 严格:`BigInt()`
-            - 宽松:`parseInt()/parseFloat()`    
-        2. 转字符串:
-            - `String()`
-        3. 转布尔值:
-            - `Boolean()`
-        4. 转对象
-            - `Object()`
-    2. 隐式转换
-        - 懒得看，遇到问题了再记录
-4. 类型判断
-    1. `isFinite()`
-        - 有限数
-    2. `isInteger()`
-        - 整形
-    3. `isNaN()`
-        - NaN
-    4. `isSafeInteger()`
-        - 安全整形
-5. 数据容器
-    1. 动态数组(list对象)
-        1. 属性
-            - 长度:`length()`
-        2. 方法
-            1. 增
-                - 压栈:`push()`
-                - 拼接:`concat()`
-                - 插入:`splice(,,)`
-            2. 删
-                - 出栈:`pop()`
-                - 去除:`splice(起,个数)`
-            3. 改
-                - 替换:`splice(起,个数,新元素)`
-                - 反转:`reverse()`
-                - 排序:`sort(比较函数)`
-            4. 查
-                - 首个:`find(条件)`
-                - 截取:`slice(m,n)`
-                - 过滤:`fliter(条件)`
-                - 重组:`map(条件)`
-            5. 遍历
-                - 循环:`for_of`
-                - 循环回调:`forEach(条件)`
-    2. 动态字符(string对象)
-        1. 属性
-            - 长度:`length()`
-        2. 方法
-            1. 增
-                - 拼接:`concat()`
-                - 填充:`padStart()`/`padEnd()`
-            2. 删
-                - 去白:`trim()`/`trimStart()`/`trimEnd()`
-            3. 改
-                - 大小:`toLowerCase()`/`toUpperCase()`
-                - 切片:`slice(m,n)`
-            4. 查
-                - 正则:`match()`
-                - 分隔:`split()`
-                - 首位:`startWith()`/`endWith()`
-    3. 动态集合(set对象)
-        1. 属性
-            - 个数:`size()`
-        2. 方法
-            1. 增
-                - 增单:`add(x)`
-            2. 删
-                - 删除:`delete(x)`
-                - 清空:`clear()`
-            3. 改
-            4. 查
-                - 包含:`has(x)`
-            5. 遍历
-                - 循环:`for_of`
-                - 转[]:`Array.from()`
-    4. 动态字典(map对象)
-        1. 属性
-            - 个数:`size()`
-        2. 方法
-            1. 增
-                - 增单:`set(k,v)`
-            2. 删
-                - 删除:`delete(k)`
-                - 清空:`clear()`
-            3. 改
-                - 覆盖:`set(k,v)`
-            4. 查
-                - 获取:`get(k)`  
-                - 查存:`has(k)`
-            5. 遍历
-                - 循环:`for_of`
-    5. 动态对象(object对象)
-        1. 属性
-            - 统计:`Object.keys(o).length`
-        2. 方法
-            1. 增
-                - 新增:`o.key = 值`
-                - 合并:`Object.assign(目标, 源)`
-            2. 删
-                - 删除:`delete o.key`
-            3. 改
-                - 覆盖:`o.key = 值`
-            4. 查
-                - 取值:`o.key` / `o['key']`
-                - 查存:`'key' in o` / `o.hasOwnProperty('key')`
-                - 键值列表:`Object.keys(o)/values(o)/entries(o)`
-            5. 遍历
-                - 循环:`for_in`
+### 1. 定义数据
+var,let.const
+- 定义变量的关键词
+- var有变量提升的问题，变量位置在解释前全部提前到文件开头解析(现在一般不用var)
+### 2. 数据类型
+1. 布尔
+    1. bool
+        - true/false
+2. 数字
+    1. Number
+        - int+float
+    2. BigInt
+        - 任意精度数字
+3. 字符
+    1. String
+        - 静态字符数组(动态数组详见于数据容器部分)
+4. 空值
+    1. null
+        - 类似C的空指针，这个变量在栈上只有key，value没有任何数据
+        - 关于栈内存，详见于(计算机原理)
+    3. undefined
+        - 类似null，区别在于null是人为留空，undefined是解释器自己留空，常见于写ts时，编辑器标红提示变量可能为undefined
+5. 其他
+    1. object(不能算是基础数据类型)
+        - JavaScript，{}就能创建一个对象，写起来跟面向对象差不多，不需要写class和this
+        - 用法:
+            - 在内部定义子变量
+            - 在内部定义子函数
+            - 作为kv表
+    2. symbol
+        - 不懂，没用过
+### 3. 类型转换
+1. 显式转换
+    1. 转数字:
+        - 严格:`Number()`
+        - 严格:`BigInt()`
+        - 宽松:`parseInt()/parseFloat()`
+    2. 转字符串:
+        - `String()`
+    3. 转布尔值:
+        - `Boolean()`
+    4. 转对象
+        - `Object()`
+2. 隐式转换
+    - 懒得看，遇到问题了再记录
+### 4. 类型判断
+1. `isFinite()`
+    - 有限数
+2. `isInteger()`
+    - 整形
+3. `isNaN()`
+    - NaN
+4. `isSafeInteger()`
+    - 安全整形
+### 5. 数据容器
+1. 动态数组(list对象)
+    1. 属性
+        - 长度:`length()`
+    2. 方法
+        1. 增
+            - 压栈:`push()`
+            - 拼接:`concat()`
+            - 插入:`splice(,,)`
+        2. 删
+            - 出栈:`pop()`
+            - 去除:`splice(起,个数)`
+        3. 改
+            - 替换:`splice(起,个数,新元素)`
+            - 反转:`reverse()`
+            - 排序:`sort(比较函数)`
+        4. 查
+            - 首个:`find(条件)`
+            - 截取:`slice(m,n)`
+            - 过滤:`fliter(条件)`
+            - 重组:`map(条件)`
+        5. 遍历
+            - 循环:`for_of`
+            - 循环回调:`forEach(条件)`
+2. 动态字符(string对象)
+    1. 属性
+        - 长度:`length()`
+    2. 方法
+        1. 增
+            - 拼接:`concat()`
+            - 填充:`padStart()`/`padEnd()`
+        2. 删
+            - 去白:`trim()`/`trimStart()`/`trimEnd()`
+        3. 改
+            - 大小:`toLowerCase()`/`toUpperCase()`
+            - 切片:`slice(m,n)`
+        4. 查
+            - 正则:`match()`
+            - 分隔:`split()`
+            - 首位:`startWith()`/`endWith()`
+3. 动态集合(set对象)
+    1. 属性
+        - 个数:`size()`
+    2. 方法
+        1. 增
+            - 增单:`add(x)`
+        2. 删
+            - 删除:`delete(x)`
+            - 清空:`clear()`
+        3. 改
+        4. 查
+            - 包含:`has(x)`
+        5. 遍历
+            - 循环:`for_of`
+            - 转[]:`Array.from()`
+4. 动态字典(map对象)
+    1. 属性
+        - 个数:`size()`
+    2. 方法
+        1. 增
+            - 增单:`set(k,v)`
+        2. 删
+            - 删除:`delete(k)`
+            - 清空:`clear()`
+        3. 改
+            - 覆盖:`set(k,v)`
+        4. 查
+            - 获取:`get(k)`
+            - 查存:`has(k)`
+        5. 遍历
+            - 循环:`for_of`
+5. 动态对象(object对象)
+    1. 属性
+        - 统计:`Object.keys(o).length`
+    2. 方法
+        1. 增
+            - 新增:`o.key = 值`
+            - 合并:`Object.assign(目标, 源)`
+        2. 删
+            - 删除:`delete o.key`
+        3. 改
+            - 覆盖:`o.key = 值`
+        4. 查
+            - 取值:`o.key` / `o['key']`
+            - 查存:`'key' in o` / `o.hasOwnProperty('key')`
+            - 键值列表:`Object.keys(o)/values(o)/entries(o)`
+        5. 遍历
+            - 循环:`for_in`
 6. json
     1. json转js:`JSON.parse(str)`
     2. js转json:`JSON.stringify(value)`
----
 ## 函数
 1. 流程控制
     1. 条件
@@ -171,3 +174,44 @@
             - 匿名函数的一种
     5. 预定义函数
         - JavaScript语言的顶层工具函数
+## 示例代码
+### 1. 对象的三种用法:
+```js
+const objSample = {
+    // 用法1:定义子变量(属性)
+    const var = 1
+    // 用法2:定义子函数(方法)
+    const fn = () => {
+        console.log('hello world')
+    }
+
+    // 用法3:作为kv表
+    id:1,
+    name:'苹果'
+}
+```
+### 2. 常用的数据容器写法
+1. 数组套对象
+```js
+[
+    // kv表1
+    {
+        id:1,
+        name:'苹果'
+    },
+    {
+        id:2,
+        name:'李子'
+    }
+]
+```
+2. 对象套对象
+```js
+{
+    id:1,
+    arts: {
+        name:'苹果',
+        des:'一种水果'
+    }
+}
+```

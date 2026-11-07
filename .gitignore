@@ -42,3 +42,5 @@ __screenshots__/
 docs/.vitepress/cache/
 
 .workbuddy/
+
+temp/

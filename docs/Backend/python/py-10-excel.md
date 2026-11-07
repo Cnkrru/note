@@ -1,37 +1,33 @@
 # Py-Openpyxl
 
-> **说明**：Excel可以看作功能强大的csv，操作方式与csv类似。操作步骤：创建Excel -> 创建并进入sheet -> 修改sheet表单 -> 保存Excel。
+> 说明：Excel可以看作功能强大的csv，操作方式与csv类似。操作步骤：创建Excel -> 创建并进入sheet -> 修改sheet表单 -> 保存Excel。
 
 ## 写入操作
 
-| 分类 | 作用 | 函数名 | 参数 |
-| --- | --- | --- | --- |
-| **工作簿写入** | 创建新的Excel工作簿 | `openpyxl.Workbook()` | 无 |
-| | 创建新工作表 | `workbook.create_sheet()` | 工作表名称(可选) |
-| | 删除工作表 | `workbook.remove()` | 工作表对象 |
-| | 保存工作簿 | `workbook.save()` | 保存路径 |
-| **工作表写入** | 合并单元格 | `worksheet.merge_cells()` | 单元格范围 |
-| | 取消合并单元格 | `worksheet.unmerge_cells()` | 单元格范围 |
-| | 删除指定行数 | `worksheet.delete_rows()` | 起始行号 |
-| | 删除指定列数 | `worksheet.delete_cols()` | 起始列号 |
-| **单元格写入** | 向工作表末尾添加一行 | `worksheet.append()` | 可迭代对象 |
-| | 设置单元格 | `worksheet.cell()` | 行号, 列号, key |
+- 工作簿写入：创建新的Excel工作簿，`openpyxl.Workbook()`，无
+- 创建新工作表，`workbook.create_sheet()`，工作表名称(可选)
+- 删除工作表，`workbook.remove()`，工作表对象
+- 保存工作簿，`workbook.save()`，保存路径
+- 工作表写入：合并单元格，`worksheet.merge_cells()`，单元格范围
+- 取消合并单元格，`worksheet.unmerge_cells()`，单元格范围
+- 删除指定行数，`worksheet.delete_rows()`，起始行号
+- 删除指定列数，`worksheet.delete_cols()`，起始列号
+- 单元格写入：向工作表末尾添加一行，`worksheet.append()`，可迭代对象
+- 设置单元格，`worksheet.cell()`，行号, 列号, key
 
 ## 读取操作
 
-| 分类 | 作用 | 函数名 | 参数 |
-| --- | --- | --- | --- |
-| **工作簿读取** | 加载Excel工作簿 | `openpyxl.load_workbook()` | 文件名 |
-| | 获取活动工作表 | `workbook.active` | 无 |
-| | 获取所有工作表 | `workbook.sheetnames` | 无 |
-| | 通过名称获取工作表 | `workbook[sheet_name]` | 工作表名称 |
-| **工作表读取** | 获取最大行数 | `worksheet.max_row` | 无 |
-| | 获取最大列数 | `worksheet.max_column` | 无 |
-| | 迭代读取所有行 | `worksheet.iter_rows()` | 无 |
-| | 迭代读取所有列 | `worksheet.iter_cols()` | 无 |
-| **单元格读取** | 获取单元格 | `worksheet.cell()` | 行号, 列号 |
-| | 通过坐标获取单元格 | `worksheet[cell_address]` | 单元格地址 |
-| | 获取单元格值 | `cell.value` | 无 |
+- 工作簿读取：加载Excel工作簿，`openpyxl.load_workbook()`，文件名
+- 获取活动工作表，`workbook.active`，无
+- 获取所有工作表，`workbook.sheetnames`，无
+- 通过名称获取工作表，`workbook[sheet_name]`，工作表名称
+- 工作表读取：获取最大行数，`worksheet.max_row`，无
+- 获取最大列数，`worksheet.max_column`，无
+- 迭代读取所有行，`worksheet.iter_rows()`，无
+- 迭代读取所有列，`worksheet.iter_cols()`，无
+- 单元格读取：获取单元格，`worksheet.cell()`，行号, 列号
+- 通过坐标获取单元格，`worksheet[cell_address]`，单元格地址
+- 获取单元格值，`cell.value`，无
 
 ## 写入操作步骤
 

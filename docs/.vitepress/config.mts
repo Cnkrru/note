@@ -101,7 +101,7 @@ export default withMermaid(
       documentRootPath: 'docs',
       useTitleFromFileHeading: false,
       includeRootIndexFile: false,
-      includeFolderIndexFile: false,
+      includeFolderIndexFile: true,
       collapsed: true,
       sortFolderTo: 'top',
       sortMenusByCustomFunction: (a, b) =>

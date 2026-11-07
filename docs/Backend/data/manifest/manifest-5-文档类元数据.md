@@ -1,19 +1,17 @@
 # 文档类元数据写法
 
-> Office 文档（docx/xlsx/pptx）用 **OOXML core properties**，PDF 用**文档信息字典**，都支持程序化读写。
+> Office 文档（docx/xlsx/pptx）用 OOXML core properties，PDF 用文档信息字典，都支持程序化读写。
 
 ## 一、Word / Excel / PPT（OOXML core properties）
 
 ### 常见字段
-| 字段 | 说明 |
-|------|------|
-| dc:title | 标题 |
-| dc:creator | 作者 |
-| cp:lastModifiedBy | 最后修改者 |
-| dcterms:created | 创建时间 |
-| dcterms:modified | 修改时间 |
-| cp:keywords | 关键词 |
-| cp:subject | 主题 |
+- dc:title：标题
+- dc:creator：作者
+- cp:lastModifiedBy：最后修改者
+- dcterms:created：创建时间
+- dcterms:modified：修改时间
+- cp:keywords：关键词
+- cp:subject：主题
 
 ### 如何查看（解压 docx）
 ```bash
@@ -35,15 +33,13 @@ doc.save('report.docx')
 ## 二、PDF（文档信息字典）
 
 ### 常见字段
-| 字段 | 说明 |
-|------|------|
-| Title | 标题 |
-| Author | 作者 |
-| Subject | 主题 |
-| Keywords | 关键词 |
-| Creator | 创建工具 |
-| Producer | 生成器 |
-| CreationDate | 创建时间 |
+- Title：标题
+- Author：作者
+- Subject：主题
+- Keywords：关键词
+- Creator：创建工具
+- Producer：生成器
+- CreationDate：创建时间
 
 ### 如何查看
 ```bash
@@ -68,12 +64,10 @@ with open('report_new.pdf', 'wb') as f:
 
 ## 三、EPUB（OPF 元数据）
 
-| 字段 | 说明 |
-|------|------|
-| dc:title | 标题 |
-| dc:creator | 作者 |
-| dc:identifier | ISBN 等标识 |
-| dc:language | 语言 |
+- dc:title：标题
+- dc:creator：作者
+- dc:identifier：ISBN 等标识
+- dc:language：语言
 
 ```xml
 <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
@@ -85,11 +79,9 @@ with open('report_new.pdf', 'wb') as f:
 
 ## 四、RTF（头部信息）
 
-| 字段 | 说明 |
-|------|------|
-| \title | 标题 |
-| \author | 作者 |
-| \creatim | 创建时间 |
+- \title：标题
+- \author：作者
+- \creatim：创建时间
 
 ```rtf
 {\rtf1\ansi
