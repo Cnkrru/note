@@ -16,7 +16,7 @@ export default withMermaid(
       description: siteDescription,
       sitemap: { hostname: siteUrl },
       outDir: '../dist',
-      ignoreDeadLinks: 'localhostLinks',
+      ignoreDeadLinks: true,
       lastUpdated: true,
       markdown: {
         config: (md) => {
