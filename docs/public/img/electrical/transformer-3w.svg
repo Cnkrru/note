@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 360" width="780" height="360" font-family="system-ui,-apple-system,'Segoe UI','Microsoft YaHei',sans-serif" font-size="14">
+  <rect width="780" height="360" fill="#fbfbfc"/>
+
+  <g stroke="#374151" stroke-width="2" fill="none">
+    <!-- 高压支路：向上 -->
+    <path d="M390 70 V190"/>
+    <rect x="376" y="100" width="28" height="56" rx="4" fill="#eef2ff"/>
+
+    <!-- 中压支路：向右 -->
+    <path d="M390 190 H690"/>
+    <rect x="500" y="176" width="80" height="28" rx="4" fill="#eef2ff"/>
+
+    <!-- 低压支路：向左 -->
+    <path d="M390 190 H90"/>
+    <rect x="200" y="176" width="80" height="28" rx="4" fill="#eef2ff"/>
+
+    <circle cx="390" cy="190" r="4" fill="#374151"/>
+    <circle cx="390" cy="70" r="4" fill="#374151"/>
+    <circle cx="690" cy="190" r="4" fill="#374151"/>
+    <circle cx="90" cy="190" r="4" fill="#374151"/>
+  </g>
+
+  <g fill="#1f2937">
+    <text x="390" y="56" text-anchor="middle">高压侧</text>
+    <text x="706" y="195">中压侧</text>
+    <text x="74" y="195" text-anchor="end">低压侧</text>
+    <text x="418" y="134" fill="#1e3a8a">Z<tspan baseline-shift="sub" font-size="10">1</tspan></text>
+    <text x="540" y="168" text-anchor="middle" fill="#1e3a8a">Z<tspan baseline-shift="sub" font-size="10">2</tspan></text>
+    <text x="240" y="168" text-anchor="middle" fill="#1e3a8a">Z<tspan baseline-shift="sub" font-size="10">3</tspan></text>
+    <text x="404" y="186" font-size="12" fill="#6b7280">O</text>
+  </g>
+</svg>
