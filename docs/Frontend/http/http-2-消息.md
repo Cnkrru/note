@@ -1,0 +1,28 @@
+## 简介
+> 本文内容来自于MDN文档:[https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Guides/Messages](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Guides/Messages)
+> 由ASCII编码的多行文本组成
+消息分类
+- 请求
+- 响应
+## 详细
+### 请求
+1. 起始行
+    1. 请求方法
+    2. 请求路径
+    3. 请求协议
+2. 标头(第二行)
+    - 通用标头
+    - 请求标头
+    - 表示标头
+3. 主体
+> 一般用于post，来往数据才用
+### 响应
+1. 起始行(状态行)
+    1. 协议版本
+    2. 状态码
+    3. 状态文本
+2. 标头
+    - 通用标头
+    - 响应标头
+    - 表示标头
+3. 主体

@@ -55,94 +55,12 @@ var,let.const
 4. `isSafeInteger()`
     - 安全整形
 ### 5. 数据容器
-1. 动态数组(list对象)
-    1. 属性
-        - 长度:`length()`
-    2. 方法
-        1. 增
-            - 压栈:`push()`
-            - 拼接:`concat()`
-            - 插入:`splice(,,)`
-        2. 删
-            - 出栈:`pop()`
-            - 去除:`splice(起,个数)`
-        3. 改
-            - 替换:`splice(起,个数,新元素)`
-            - 反转:`reverse()`
-            - 排序:`sort(比较函数)`
-        4. 查
-            - 首个:`find(条件)`
-            - 截取:`slice(m,n)`
-            - 过滤:`fliter(条件)`
-            - 重组:`map(条件)`
-        5. 遍历
-            - 循环:`for_of`
-            - 循环回调:`forEach(条件)`
-2. 动态字符(string对象)
-    1. 属性
-        - 长度:`length()`
-    2. 方法
-        1. 增
-            - 拼接:`concat()`
-            - 填充:`padStart()`/`padEnd()`
-        2. 删
-            - 去白:`trim()`/`trimStart()`/`trimEnd()`
-        3. 改
-            - 大小:`toLowerCase()`/`toUpperCase()`
-            - 切片:`slice(m,n)`
-        4. 查
-            - 正则:`match()`
-            - 分隔:`split()`
-            - 首位:`startWith()`/`endWith()`
-3. 动态集合(set对象)
-    1. 属性
-        - 个数:`size()`
-    2. 方法
-        1. 增
-            - 增单:`add(x)`
-        2. 删
-            - 删除:`delete(x)`
-            - 清空:`clear()`
-        3. 改
-        4. 查
-            - 包含:`has(x)`
-        5. 遍历
-            - 循环:`for_of`
-            - 转[]:`Array.from()`
-4. 动态字典(map对象)
-    1. 属性
-        - 个数:`size()`
-    2. 方法
-        1. 增
-            - 增单:`set(k,v)`
-        2. 删
-            - 删除:`delete(k)`
-            - 清空:`clear()`
-        3. 改
-            - 覆盖:`set(k,v)`
-        4. 查
-            - 获取:`get(k)`
-            - 查存:`has(k)`
-        5. 遍历
-            - 循环:`for_of`
-5. 动态对象(object对象)
-    1. 属性
-        - 统计:`Object.keys(o).length`
-    2. 方法
-        1. 增
-            - 新增:`o.key = 值`
-            - 合并:`Object.assign(目标, 源)`
-        2. 删
-            - 删除:`delete o.key`
-        3. 改
-            - 覆盖:`o.key = 值`
-        4. 查
-            - 取值:`o.key` / `o['key']`
-            - 查存:`'key' in o` / `o.hasOwnProperty('key')`
-            - 键值列表:`Object.keys(o)/values(o)/entries(o)`
-        5. 遍历
-            - 循环:`for_in`
-6. json
+- 动态数组:[js-2-动态数组](./js-2-动态数组.md)
+- 动态字符:[js-3-动态字符](./js-3-动态字符.md)
+- 动态集合:[js-4-动态集合](./js-4-动态集合.md)
+- 动态字典:[js-5-动态字典](./js-5-动态字典.md)
+- 动态对象:[js-6-动态对象](./js-6-动态对象.md)
+- json
     1. json转js:`JSON.parse(str)`
     2. js转json:`JSON.stringify(value)`
 ## 函数
