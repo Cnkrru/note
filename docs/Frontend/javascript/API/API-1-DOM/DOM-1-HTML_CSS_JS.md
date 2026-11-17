@@ -1,4 +1,3 @@
-# JS-2-DOM
 ## DOM(document object model)
 DOM是BOM的子对象
 ### DOM结构
