@@ -1,37 +1,43 @@
 > 学习资料来源:MDN文档:(MDN-JS)[https://developer.mozilla.org/zh-CN/docs/Web/JavaScript]
 ## 数据
-### 1. 定义数据
+### 一、 定义数据
 var,let.const
 - 定义变量的关键词
 - var有变量提升的问题，变量位置在解释前全部提前到文件开头解析(现在一般不用var)
-### 2. 数据类型
-1. 布尔
-    1. bool
-        - true/false
-2. 数字
-    1. Number
-        - int+float
-    2. BigInt
-        - 任意精度数字
-3. 字符
-    1. String
-        - 静态字符数组(动态数组详见于数据容器部分)
-4. 空值
-    1. null
-        - 类似C的空指针，这个变量在栈上只有key，value没有任何数据
-        - 关于栈内存，详见于(计算机原理)
-    3. undefined
-        - 类似null，区别在于null是人为留空，undefined是解释器自己留空，常见于写ts时，编辑器标红提示变量可能为undefined
-5. 其他
-    1. object(不能算是基础数据类型)
-        - JavaScript，{}就能创建一个对象，写起来跟面向对象差不多，不需要写class和this
-        - 用法:
-            - 在内部定义子变量
-            - 在内部定义子函数
-            - 作为kv表
-    2. symbol
-        - 不懂，没用过
-### 3. 类型转换
+### 二、 数据类型
+#### 1. 基本数据类型
+1. bool
+    - true/false
+2. Number
+    - int+float
+3. BigInt
+    - 任意精度数字
+4. String
+    - 静态字符数组(动态数组详见于数据容器部分)
+5. null
+    - 类似C的空指针，这个变量在栈上只有key，value没有任何数据
+    - 关于栈内存，详见于(计算机原理)
+6. undefined
+    - 类似null，区别在于null是人为留空，undefined是解释器自己留空，常见于写ts时，编辑器标红提示变量可能为undefined
+7. symbol
+    - 不懂，没用过
+#### 2. 对象数据类型
+1. object
+    - JavaScript，{}就能创建一个对象，写起来跟面向对象差不多，不需要写class和this
+    - 用法:
+        - 在内部定义子变量
+        - 在内部定义子函数
+        - 作为kv表
+> 其他类型都是Object的衍生
+#### 3. JavaScript动态类型
+JavaScript的变量的类型可以随着值的类型改变
+```js
+let x = 0 // number
+x = 'h'   // string
+```
+#### 4. typeof查类型
+`typeof(变量名)`可以查看该变量的类型
+#### 5. 类型转换
 1. 显式转换
     1. 转数字:
         - 严格:`Number()`
@@ -45,7 +51,7 @@ var,let.const
         - `Object()`
 2. 隐式转换
     - 懒得看，遇到问题了再记录
-### 4. 类型判断
+#### 6. 类型判断
 1. `isFinite()`
     - 有限数
 2. `isInteger()`
@@ -54,15 +60,6 @@ var,let.const
     - NaN
 4. `isSafeInteger()`
     - 安全整形
-### 5. 数据容器
-- 动态数组:[js-2-动态数组](./js-2-动态数组.md)
-- 动态字符:[js-3-动态字符](./js-3-动态字符.md)
-- 动态集合:[js-4-动态集合](./js-4-动态集合.md)
-- 动态字典:[js-5-动态字典](./js-5-动态字典.md)
-- 动态对象:[js-6-动态对象](./js-6-动态对象.md)
-- json
-    1. json转js:`JSON.parse(str)`
-    2. js转json:`JSON.stringify(value)`
 ## 函数
 1. 流程控制
     1. 条件
