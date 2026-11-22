@@ -15,7 +15,7 @@ true/false
 #### 2. void
 用于没有返回值的函数的返回值的类型
 #### 3. array
-type []/Array<type>
+`type[]` / `Array<type>`
 #### 4. tuple
 已知数量和类型的数组
 ```ts
